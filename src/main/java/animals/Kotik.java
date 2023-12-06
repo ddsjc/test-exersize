@@ -6,7 +6,7 @@ public class Kotik {
     private String name;
     private String voice;
     private int satiety;
-    private double weight;
+    private int weight;
     private static int count;
     private String[] schedule = new String[24];
 
@@ -42,7 +42,7 @@ public class Kotik {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -66,14 +66,14 @@ public class Kotik {
         count++;
     }
 
-    public Kotik(String name, String voice, int satiety, double weight) {
+    public Kotik(String name, String voice, int satiety, int weight) {
         this.name = name;
         this.voice = voice;
         this.satiety = satiety;
         this.weight = weight;
         count++;
     }
-
+    
     boolean play(){
         if(satiety > 0){
             System.out.println("Cat is playing! Satiety : " + satiety);
