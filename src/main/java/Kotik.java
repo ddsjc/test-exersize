@@ -1,4 +1,4 @@
-package main.java.animals;
+package main.java;
 
 public class Kotik {
 
