@@ -50,16 +50,8 @@ public class Kotik {
         return count;
     }
 
-    public static void setCount(int count) {
-        Kotik.count = count;
-    }
-
     public String[] getSchedule() {
         return schedule;
-    }
-
-    public void setSchedule(String[] schedule) {
-        this.schedule = schedule;
     }
 
     public Kotik(){
