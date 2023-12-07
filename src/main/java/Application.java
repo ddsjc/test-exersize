@@ -1,6 +1,12 @@
 import animals.Kotik;
 
 public class Application {
+    public static String compareVoice(Kotik voice1, Kotik voice2){
+        if (voice1.getVoice().equals(voice2.getVoice())){
+            return "Voices is equals";
+        }
+        else return "Voices is not equals";
+    }
     public static void main(String[] args){
 
         Kotik kotik1 = new Kotik("Barsick", "Myau", 5, 2500);
@@ -16,11 +22,8 @@ public class Application {
         kotik1.outputSchedule(kotik1.getSchedule());
         System.out.println("Name is  " + kotik1.getName() + " , weight is " + kotik1.getWeight() + " grams");
         System.out.println("Count of cats : " + Kotik.getCount());
-        if(kotik1.getVoice().equals(kotik2.getVoice())){
-            System.out.println("Voices is equals!");
-        }
-        else{
-            System.out.println("Not equals voices!");
-        }
+
+        System.out.println(compareVoice(kotik1, kotik2));
+
     }
 }

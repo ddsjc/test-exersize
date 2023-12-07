@@ -100,6 +100,7 @@ public class Kotik {
        }
     }
 
+
     boolean wash(){
         if(satiety > 0){
             System.out.println("Cat is washin! Satiety : " + satiety);
@@ -159,7 +160,7 @@ public class Kotik {
         }
     }
 
-    public void liveAnotherDay(){
+    public String liveAnotherDay(){
         for (int i = 0 ; i <24 ; i++){
             switch((int) (Math.random() * METHODS) + 1) {
                 case 1:
@@ -206,5 +207,6 @@ public class Kotik {
 
             }
         }
+        return "Day is ended";
     }
 }
