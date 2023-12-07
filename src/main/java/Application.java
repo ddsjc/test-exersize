@@ -14,6 +14,7 @@ public class Application {
         kotik2.setWeight(3200);
 
         kotik1.liveAnotherDay();
+        kotik2.liveAnotherDay();
         kotik1.outputSchedule(kotik1.getSchedule());
         System.out.println("Name is  " + kotik1.getName() + " , weight is " + kotik1.getWeight() + " grams");
         System.out.println("Count of cats : " + Kotik.getCount());
