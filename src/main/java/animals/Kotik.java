@@ -152,9 +152,10 @@ public class Kotik {
         }
     }
 
-    public String liveAnotherDay(){
-        for (int i = 0 ; i <24 ; i++){
-            switch((int) (Math.random() * METHODS) + 1) {
+    public String[] liveAnotherDay() {
+
+        for (int i = 0; i < 24; i++) {
+            switch ((int) (Math.random() * METHODS) + 1) {
                 case 1:
                     if (play()) {
                         schedule[i] = i + " - Played";
@@ -171,7 +172,6 @@ public class Kotik {
                         eat();
                     }
                     break;
-
                 case 3:
                     if (wash()) {
                         schedule[i] = i + " - Washed";
@@ -196,9 +196,10 @@ public class Kotik {
                         eat();
                     }
                     break;
-
             }
         }
-        return "Day is ended";
+
+        return schedule;
     }
+
 }

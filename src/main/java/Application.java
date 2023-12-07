@@ -1,11 +1,11 @@
 import animals.Kotik;
 
 public class Application {
-    public static String compareVoice(Kotik voice1, Kotik voice2){
+    public static boolean compareVoice(Kotik voice1, Kotik voice2){
         if (voice1.getVoice().equals(voice2.getVoice())){
-            return "Voices is equals";
+            return true;
         }
-        else return "Voices is not equals";
+        else return false;
     }
     public static void main(String[] args){
 
