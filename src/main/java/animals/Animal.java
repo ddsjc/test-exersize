@@ -25,11 +25,9 @@ public abstract class Animal {
         this.voice = voice;
     }
 
-    public String getVoice() {
-        return voice;
-    }
 
-    private int satiety;
+
+    protected int satiety;
     public abstract void eat(Food food);
     public int getSatiety() {
         return satiety;

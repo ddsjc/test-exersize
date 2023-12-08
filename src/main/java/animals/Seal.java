@@ -8,4 +8,8 @@ public class Seal extends Carnivorous implements Swim, Voice, Run {
     public void run(){
         System.out.println("Seal is running");
     }
+
+    public String getVoice(){
+        return "Brraa";
+    }
 }

@@ -29,14 +29,14 @@ public class Zoo {
         worker.feed(wolf1, meat);
         worker.getVoice(wolf1);
 
-        Swim[] pound = createPound();
+        Swim[] pound = createPond();
 
         for(Swim swim : pound){
             swim.swim();
         }
     }
 
-    public static Swim[] createPound(){
+    public static Swim[] createPond(){
         Swim[] pound = new Swim[3];
         pound[0] = new Duck();
         pound[1] = new Fish();
