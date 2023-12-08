@@ -1,4 +1,7 @@
-package main.java.animals;
+package animals;
 
-public class Giraffe extends Herbivore {
+public class Giraffe extends Herbivore implements Run, Voice {
+    public void run(){
+        System.out.println("Giraffe is running");
+    }
 }

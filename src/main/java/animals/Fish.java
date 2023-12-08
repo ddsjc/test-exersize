@@ -1,4 +1,8 @@
-package main.java.animals;
+package animals;
 
-public class Fish extends Herbivore {
+public class Fish extends Herbivore implements Swim {
+    @Override
+    public void swim() {
+        System.out.println("Fish is swim");
+    }
 }

@@ -1,4 +1,7 @@
-package main.java.animals;
+package animals;
 
-public class Mole extends Carnivorous {
+public class Mole extends Carnivorous implements Run {
+    public void run(){
+        System.out.println("Mole is running");
+    }
 }

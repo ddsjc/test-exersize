@@ -1,4 +1,4 @@
-package main.java.food;
+package food;
 
 public class Grass extends Food{
 

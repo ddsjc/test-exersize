@@ -1,4 +1,4 @@
-package main.java.animals;
+package animals;
 
 public interface Swim {
     void swim();
