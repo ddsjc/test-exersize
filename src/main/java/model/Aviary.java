@@ -15,10 +15,10 @@ public class Aviary<T extends Animal>{
 
     public void addAnimal(T animal) {
         try {
-            if(animal.getSize().equals(size)) {
-                aviaryMap.put(animal.getName(), animal);
+            if (!animal.getSize().equals(size)) {
+                throw new WrongSizeException();
             }
-            else {throw new WrongSizeException();}
+            aviaryMap.put(animal.getName(), animal);
         }catch (WrongSizeException e){
              e.printStackTrace();
         }

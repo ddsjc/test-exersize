@@ -7,8 +7,8 @@ import model.Aviary;
 import model.Size;
 
 public class Zoo {
-    private static Aviary<Herbivore> herbivoreAviary;
-    private static Aviary<Carnivorous> carnivorousAviary;
+    private static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.LARGE);;
+    private static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.MEDIUM);;
     public static void main(String[] args){
         Duck duck1 = new Duck("Donald");
         duck1.setVoice("Krya");
@@ -37,8 +37,7 @@ public class Zoo {
         for(Swim swim : pound){
             swim.swim();
         }
-        herbivoreAviary = new Aviary<>(Size.LARGE);
-        carnivorousAviary = new Aviary<>(Size.MEDIUM);
+
 
         Zoo zoo = new Zoo();
 
