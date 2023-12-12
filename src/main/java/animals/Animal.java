@@ -1,6 +1,8 @@
 package animals;
 
 import food.Food;
+import food.WrongFoodException;
+import model.Size;
 
 public abstract class Animal {
     public void setSatiety(int satiety) {
@@ -11,14 +13,18 @@ public abstract class Animal {
 
     }
     private String voice;
-    private String type;
+    private String name;
 
-    public String getType() {
-        return type;
+    public Animal(String name) {
+        this.name = name;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setVoice(String voice) {
@@ -28,9 +34,11 @@ public abstract class Animal {
 
 
     protected int satiety;
-    public abstract void eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
     public int getSatiety() {
         return satiety;
     }
+
+    public abstract Size getSize();
 
 }

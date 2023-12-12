@@ -1,9 +1,19 @@
 package animals;
 
+import model.Size;
+
 public class Kotik extends Carnivorous implements Voice, Run{
+
+    public Kotik(String name) {
+        super(name);
+    }
 
     public String getVoice(){
         return "Myaau";
+    }
+    public Size getSize() {
+        Size size = Size.SMALL;
+        return size;
     }
 
     public void run(){
@@ -43,14 +53,6 @@ public class Kotik extends Carnivorous implements Voice, Run{
         this.schedule = schedule;
     }
 
-    public Kotik(){
-        count++;
-    }
-
-    public Kotik(String name, String voice, int satiety, int weight) {
-        this.weight = weight;
-        count++;
-    }
     
     boolean play(){
         if(satiety > 0){

@@ -16,10 +16,13 @@ public class Worker {
     }
 
     public void feed(Animal animal, Food food){
-        animal.eat(food);
-        System.out.println(getName() + " fed " + animal.getType());
-        System.out.println("Animal ate satiety is " + animal.getSatiety());
-        //System.out.println("Count food : " + food.getEnergy());
+        try{
+            animal.eat(food);
+            System.out.println(getName() + " fed " + animal.getName());
+            System.out.println("Animal ate satiety is " + animal.getSatiety());
+        }catch (Exception e){
+            System.out.println("Mistake of feed!");
+        }
     }
 
     public void getVoice(Voice animal){
