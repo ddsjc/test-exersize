@@ -5,35 +5,36 @@ import animals.Animal;
 import java.util.HashMap;
 
 public class Aviary<T extends Animal>{
-    public Size size;
-    private HashMap<String, T> animals;
+    private Size size;
+    private HashMap<String, T> aviaryMap;
 
     public Aviary(Size size) {
         this.size = size;
-        this.animals = new HashMap<>();
+        this.aviaryMap = new HashMap<>();
     }
 
     public void addAnimal(T animal) {
         try {
             if(animal.getSize().equals(size)) {
-                animals.put(animal.getName(), animal);
+                aviaryMap.put(animal.getName(), animal);
             }
+            else {throw new WrongSizeException();}
         }catch (WrongSizeException e){
             System.out.println(">>>" + e);
         }
 
     }
     public T getAnimal(String name){
-        for(T animal: animals.values())
-            if (animals.containsKey(name)){
+        for(T animal: aviaryMap.values())
+            if (aviaryMap.containsKey(name)){
                 return animal;
             }
         return null;
     }
 
-    public boolean removeAnimal(T animal){
-        if(animals.containsKey(animal.getName())){
-            animals.remove(animal.getName());
+    public boolean removeAnimal(String name){
+        if(aviaryMap.containsKey(name)){
+            aviaryMap.remove(name);
             return true;
         }
         else{

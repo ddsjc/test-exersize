@@ -7,8 +7,8 @@ import model.Aviary;
 import model.Size;
 
 public class Zoo {
-    private static Aviary<Animal> herbivoreAviary;
-    private static Aviary<Animal> carnivorousAviary;
+    private static Aviary<Herbivore> herbivoreAviary;
+    private static Aviary<Carnivorous> carnivorousAviary;
     public static void main(String[] args){
         Duck duck1 = new Duck("Donald");
         duck1.setVoice("Krya");
@@ -39,30 +39,36 @@ public class Zoo {
         }
         herbivoreAviary = new Aviary<>(Size.LARGE);
         carnivorousAviary = new Aviary<>(Size.MEDIUM);
-        fillCarnivorousAviary(carnivorousAviary);
-        fillHerbivoreAviary(herbivoreAviary);
+        fillCarnivorousAviary();
+        fillHerbivoreAviary();
         getCarnivorous("Freddy");
         getHerbivore("Vasiliy");
     }
-    static void fillCarnivorousAviary(Aviary<Animal> carnivorousAviary){
+    /*static void fillCarnivorousAviary(Aviary<Animal> carnivorousAviary){
         Mole mole = new Mole("Freddy");
         Fish fish2 = new Fish("Pirog");
         carnivorousAviary.addAnimal(mole);
         carnivorousAviary.addAnimal(fish2);
+    }*/
+    static void fillCarnivorousAviary(){
+        Mole mole = new Mole("Freddy");
+        Wolf wolf2 = new Wolf("Pirog");
+        carnivorousAviary.addAnimal(mole);
+        carnivorousAviary.addAnimal(wolf2);
     }
 
-    static void fillHerbivoreAviary(Aviary<Animal> herbivoreAviary){
+    static void fillHerbivoreAviary(){
         Giraffe giraffe = new Giraffe("Vasiliy");
         Duck duck2 = new Duck("Trump");
         herbivoreAviary.addAnimal(giraffe);
         herbivoreAviary.addAnimal(duck2);
     }
 
-    static Animal getCarnivorous(String name){
+    static Carnivorous getCarnivorous(String name){
         return carnivorousAviary.getAnimal(name);
     }
 
-    static Animal getHerbivore(String name){
+    static Herbivore getHerbivore(String name){
         return herbivoreAviary.getAnimal(name);
     }
     public static Swim[] createPond(){
