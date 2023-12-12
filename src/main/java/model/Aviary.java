@@ -13,7 +13,7 @@ public class Aviary<T extends Animal>{
         this.aviaryMap = new HashMap<>();
     }
 
-    public void addAnimal(T animal) {
+    public void addAnimal(T animal) throws WrongSizeException{
         try {
             if(animal.getSize().equals(size)) {
                 aviaryMap.put(animal.getName(), animal);

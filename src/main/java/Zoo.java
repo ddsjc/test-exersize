@@ -39,25 +39,20 @@ public class Zoo {
         }
         herbivoreAviary = new Aviary<>(Size.LARGE);
         carnivorousAviary = new Aviary<>(Size.MEDIUM);
-        fillCarnivorousAviary();
-        fillHerbivoreAviary();
+        fillCarnivorousAviary(carnivorousAviary);
+        fillHerbivoreAviary(herbivoreAviary);
         getCarnivorous("Freddy");
         getHerbivore("Vasiliy");
     }
-    /*static void fillCarnivorousAviary(Aviary<Animal> carnivorousAviary){
-        Mole mole = new Mole("Freddy");
-        Fish fish2 = new Fish("Pirog");
-        carnivorousAviary.addAnimal(mole);
-        carnivorousAviary.addAnimal(fish2);
-    }*/
-    static void fillCarnivorousAviary(){
+
+    static void fillCarnivorousAviary(Aviary<Carnivorous> carnivorousAviary){
         Mole mole = new Mole("Freddy");
         Wolf wolf2 = new Wolf("Pirog");
         carnivorousAviary.addAnimal(mole);
         carnivorousAviary.addAnimal(wolf2);
     }
 
-    static void fillHerbivoreAviary(){
+    static void fillHerbivoreAviary(Aviary<Herbivore> herbivoreAviary){
         Giraffe giraffe = new Giraffe("Vasiliy");
         Duck duck2 = new Duck("Trump");
         herbivoreAviary.addAnimal(giraffe);
