@@ -42,13 +42,13 @@ public class Zoo {
 
         Zoo zoo = new Zoo();
 
-        zoo.fillCarnivorousAviary(carnivorousAviary);
-        zoo.fillHerbivoreAviary(herbivoreAviary);
+        zoo.fillCarnivorousAviary();
+        zoo.fillHerbivoreAviary();
         getCarnivorous("Freddy");
         getHerbivore("Vasiliy");
     }
 
-    static void fillCarnivorousAviary(Aviary<Carnivorous> carnivorousAviary){
+    static void fillCarnivorousAviary(){
         Mole mole = new Mole("Freddy");
         Wolf wolf2 = new Wolf("Pirog");
         Kotik kotik2 = new Kotik("Marik");
@@ -57,7 +57,7 @@ public class Zoo {
         carnivorousAviary.addAnimal(kotik2);
     }
 
-    static void fillHerbivoreAviary(Aviary<Herbivore> herbivoreAviary){
+    static void fillHerbivoreAviary(){
         Giraffe giraffe = new Giraffe("Vasiliy");
         Duck duck2 = new Duck("Trump");
         Fish fish2 = new Fish("Piran");
