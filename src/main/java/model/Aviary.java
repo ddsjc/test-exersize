@@ -20,7 +20,7 @@ public class Aviary<T extends Animal>{
             }
             else {throw new WrongSizeException();}
         }catch (WrongSizeException e){
-            System.out.println(">>>" + e);
+             e.printStackTrace();
         }
 
     }
